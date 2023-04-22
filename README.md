@@ -47,25 +47,3 @@ For example, in the above image the date January 18th, 2023 is selected. When we
 <p align="center"><img width="698" alt="DevicesRemoved-ConsoleOutput" src="https://github.build.ge.com/storage/user/114690/files/8a4e8a51-3377-4429-b328-3a57d32db42a"></p>
 
 8. After clicking 'Remove Devices' you will start to see output in the console box showing the tasks to tool is conducting. Most success/error/failure output will be redirected to this console box. Upon completing the tasks for each selected user the tool will refresh the user list as final verification of removed devices. From here if desired you can copy/paste the console output to a text file to conduct any required Maintenance Logs.
-
-# Jabber-Device-Manager.ps1
-(Powershell Console Script version semi-deprecated but still usable)
-
-Powershell tool to facilitate management of Cisco Unified Call Manager (CUCM) users and devices via CUCM SOAP API using
-native AXL Rest calls.
-
-Must be ran on a device with the Active Directory Powershell module available and you must have admin login credentials
-to the CUCM server, no other dependancies are required.
-
-When ran it will check disabled users in AD and generate a list that have a Phone Device associated with them in CUCM. It
-will then prompt if you would like to remove the associated devices for each user. Selecting to remove the device will
-remove it from associated devices for the user and delete the device in CUCM, thus freeing up that license from the
-available license pool.
-
-Planned future featuers incude a UI and further user/device management within the tool.
-
-_Jake Hillman_
-
-_Belcan Contractor_
-
-![114690](https://github.build.ge.com/storage/user/114690/files/6c719b95-25ed-426e-a542-a7e94d5d8f9e)
