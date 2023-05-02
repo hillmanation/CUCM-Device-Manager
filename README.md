@@ -12,38 +12,38 @@ No install required, simply download the 'Jabber Device Manager.exe' for the exe
 
 Most of the operation is self explanatory, but here is a run down of the steps to remove a device from a user:
 
-<p align="center"><img width="698" alt="ServerName-Login" src="https://github.build.ge.com/storage/user/114690/files/8f80c13f-bcfc-4145-8aa4-7c29bade428e"></p>
+<p align="center"><img width="698" alt="ServerName-Login" src="https://user-images.githubusercontent.com/66786161/235771832-5a0a02ab-a07f-4ba8-b6e4-5021435b0c8a.PNG"></p>
 
 1. Verify the local CUCM server FQDN is correct for your environment (shown above). Upon logging in successfully this servername will be saved in your local profile on the device you run it from. This should populate the saved servername upon re-running the tool. If there are any unknown errors running the tool verify the CUCM server version and change it accordingly, but the '12.5' value should suffice in most instances regardless of version.
 
-<p align="center"><img width="691" alt="Login-Prompt" src="https://github.build.ge.com/storage/user/114690/files/637be4fd-a253-48fd-965c-73729f084423"></p>
+<p align="center"><img width="691" alt="Login-Prompt" src="https://user-images.githubusercontent.com/66786161/235771881-46252fff-17de-452f-81aa-1959965f72ab.PNG"></p>
 
 2. Upon clicking login you will be prompted to enter the server credentials, it is recommended to use the built in 'Admin' account as it will have rights to read/edit the CUCM database via the SOAP API this tool utilizes. Other accounts can be used but may need to have permissions edited in order for the tool to function properly.
 
 Information on adding these permissions to an account in CUCM can be found here: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cucm/admin/11_5_1/sysConfig/CUCM_BK_SE5DAF88_00_cucm-system-configuration-guide-1151/CUCM_BK_SE5DAF88_00_cucm-system-configuration-guide-1151_chapter_0100000.html
 
-<p align="center"><img width="698" alt="Date-Selection" src="https://github.build.ge.com/storage/user/114690/files/2b9924dd-74a6-4a8d-ad4f-db2c330237fc"></p>
+<p align="center"><img width="698" alt="Date-Selection" src="https://user-images.githubusercontent.com/66786161/235771930-1f98dc8c-3eaa-4193-ac17-a4c5fae6e3f6.PNG"></p>
 
 3. Choose a date to look for accounts that have not logged in before. The tool defaults this date to 90 days prior to the current date. There are also buttons below the drop down that will change the selected date accordingly.
 
 For example, in the above image the date January 18th, 2023 is selected. When we search for users in a future step, the tool will check Active Directory for user accounts that have not logged in since that date. Adjust this date to your desired search.
 
-<p align="center"><img width="698" alt="Userlist" src="https://github.build.ge.com/storage/user/114690/files/1e9f14f6-a769-4614-a6c1-952b02714713"></p>
+<p align="center"><img width="698" alt="Userlist" src="https://user-images.githubusercontent.com/66786161/235771976-026202c3-bbe0-4dcf-ad82-cb5732e0672e.PNG"></p>
 
 4. The figure above shows the output of clicking 'Find Users' based only on the desired last logon date selected in the previous step. It takes the users found in Active Directory with the selected search options and finds users that currently have a device in CUCM/Jabber. This will then populate the list at the bottom of the form and provide information for each user found.
 
-<p align="center"><img width="698" alt="Select-DisabledOU" src="https://github.build.ge.com/storage/user/114690/files/988e0733-1a14-4bcb-90e3-9dd837cf8016"></p>
+<p align="center"><img width="698" alt="Select-DisabledOU" src="https://user-images.githubusercontent.com/66786161/235772038-755335d7-d939-494a-ba86-98e1dc434d53.PNG"></p>
 
 5. If desired you can expand the search to include users in the discovered Disabled OU in your Active Directory structure. Since there may be more than one, select from the drop down the desired OU search location.
 
-<p align="center"><img width="698" alt="Options" src="https://github.build.ge.com/storage/user/114690/files/4251ec20-a46e-4244-86d7-1b84f0105eaa"></p>
+<p align="center"><img width="698" alt="Options" src="https://user-images.githubusercontent.com/66786161/235772079-19e24d60-4305-4862-9d91-60e1d0b046e7.PNG"></p>
 
 6. There is also an option to include all discovered Disabled Users in case there are ones that have not been moved to a Disabled OU.
 
-<p align="center"><img width="698" alt="Select-Remove" src="https://github.build.ge.com/storage/user/114690/files/670cbc3b-6de9-4a70-9542-2e36a16df309"></p>
+<p align="center"><img width="698" alt="Select-Remove" src="https://user-images.githubusercontent.com/66786161/235772117-09384ae7-aff3-465f-8d8d-7a03df9bc996.PNG"></p>
 
 7. Upon selecting the desired Date and Options, review the generated user list and determine which users you wish to remove Jabber/CUCM devices from. Check the box next to these users and click the 'Remove Devices' button.
 
-<p align="center"><img width="698" alt="DevicesRemoved-ConsoleOutput" src="https://github.build.ge.com/storage/user/114690/files/8a4e8a51-3377-4429-b328-3a57d32db42a"></p>
+<p align="center"><img width="698" alt="DevicesRemoved-ConsoleOutput" src="https://user-images.githubusercontent.com/66786161/235772161-affa42c6-7d0d-41e6-ad0e-7a191609307b.PNG"></p>
 
 8. After clicking 'Remove Devices' you will start to see output in the console box showing the tasks to tool is conducting. Most success/error/failure output will be redirected to this console box. Upon completing the tasks for each selected user the tool will refresh the user list as final verification of removed devices. From here if desired you can copy/paste the console output to a text file to conduct any required Maintenance Logs.
