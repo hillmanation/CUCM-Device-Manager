@@ -1,6 +1,6 @@
-# Jabber Device Manager.exe
+# CUCM Device Manager.exe
 
-Jabber Device Manager Powershell executable for removing user devices in Cisco Unified Call Manager (CUCM) from stale/disabled users, doing so will remove the License they are holding within CUCM. Utilizes native Rest API calls to the CUCM server and only requires to be run on a system that has the Powershell Active Directory Module installed with no other dependancies. Since we are querying AD for user account information, you will want to run this tool from an account that has at least 'Read' access to the majority of OUs and Objects in your Active Directory Domain.
+CUCM Device Manager Powershell executable for removing user devices in Cisco Unified Call Manager (CUCM) from stale/disabled users, doing so will remove the License they are holding within CUCM. Utilizes native Rest API calls to the CUCM server and only requires to be run on a system that has the Powershell Active Directory Module installed with no other dependancies. Since we are querying AD for user account information, you will want to run this tool from an account that has at least 'Read' access to the majority of OUs and Objects in your Active Directory Domain.
 
 Now with more UI!
 
