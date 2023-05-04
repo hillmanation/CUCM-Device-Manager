@@ -47,3 +47,9 @@ For example, in the above image the date January 18th, 2023 is selected. When we
 <p align="center"><img width="698" alt="DevicesRemoved-ConsoleOutput" src="https://user-images.githubusercontent.com/66786161/235772161-affa42c6-7d0d-41e6-ad0e-7a191609307b.PNG"></p>
 
 8. After clicking 'Remove Devices' you will start to see output in the console box showing the tasks to tool is conducting. Most success/error/failure output will be redirected to this console box. Upon completing the tasks for each selected user the tool will refresh the user list as final verification of removed devices. From here if desired you can copy/paste the console output to a text file to conduct any required Maintenance Logs.
+
+#Customization
+
+I embedded my Icon in the source file as a base64 image (line 29), if you wish to change the icon just swap out the string there and rebuild the exe for your purposes using a complier like [ps2exe](https://github.com/MScholtes/PS2EXE). You can also edit the default server name in the source file (line 10) before compiling.
+
+Submit any feature requests and feedback, the methods I used here can be leveraged for a large number of CUCM tasks, not just removing user devices, this was just a specific need and use case I had in the environment I work in to free up CUCM licenses that stale users in AD were holding.
