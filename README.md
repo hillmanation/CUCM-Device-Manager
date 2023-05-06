@@ -6,7 +6,7 @@ Now with more UI!
 
 # Install
 
-No install required, simply download the 'Jabber Device Manager.exe' for the executable or 'Jabber-Device-Manager-GUI.ps1' and run either on a machine with the Active Directory Powershell module installed. The function of both are identical, the exe is just packaged for convenience.
+No install required, simply download the 'CUCM Device Manager.exe' for the executable or 'CUCM-Device-Manager-GUI.ps1' and run either on a machine with the Active Directory Powershell module installed. The function of both are identical, the exe is just packaged for convenience.
 
 # Operation
 
